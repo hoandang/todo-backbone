@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title></title>
+    <style type="text/css" media="all">
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1> My Task </h1>
+
+    <form id="addTask">
+        <input type="text" name="title" placeholder="Enter New Task" /> 
+        <select name="priority">
+            <option value="0">-- Select Priority --</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="Add New Task" />
+    </form>
+
+    <div class="tasks">
+        <script id="tasksTemplate" type="text/template">
+        <strong><%= title %></strong> - <%= priority %> 
+        <button class="edit"> Edit </button>
+        <button class="delete"> Delete </button>
+        </script>
+
+        <script id="editTaskTemplate" type="text/template">
+        <form>
+            <input type="text" value="<%= title %>" name="title" />
+            <select name="priority">
+                <% for (var i in  priorities) { %>
+                <option value="<%= priorities[i] %>"><%= priorities[i] %></option>
+                <% } %>
+            </select>
+            <input type="submit" class="save" value="Save" />
+            <input type="button" class="cancel" value="Cancel" />
+        </form>
+        </script>
+    </div>
+
+    <script src="scripts/vendor/underscore-amd/underscore.js"></script>
+    <script src="scripts/vendor/jquery/jquery.js"></script>
+    <script src="scripts/vendor/backbone-amd/backbone.js"></script>
+    <script src="scripts/vendor/tidepool-backbone.syphon/lib/backbone.syphon.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

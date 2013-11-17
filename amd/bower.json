@@ -1,0 +1,12 @@
+{
+    "name": "RequireJS Starter",
+    "version": "1.0.0",
+    "dependencies": {
+        "requirejs": "latest",
+        "jquery": "latest",
+        "backbone-amd": "latest",
+        "tidepool-backbone.syphon": "latest",
+        "underscore-amd": "latest",
+        "requirejs-text": "latest"
+    }
+}

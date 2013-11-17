@@ -1,0 +1,8 @@
+<input type="text" value="<%= title %>" name="title" />
+<select name="priority">
+    <% for (var i in  priorities) { %>
+    <option value="<%= priorities[i] %>"><%= priorities[i] %></option>
+    <% } %>
+</select>
+<input type="submit" class="save" value="Save" />
+<input type="button" class="cancel" value="Cancel" />

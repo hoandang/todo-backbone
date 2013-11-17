@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css" media="all">
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> My Tasks </h1>
+
+    <form id="addTask">
+        <input type="text" name="title" placeholder="Enter New Task" /> 
+        <select name="priority">
+            <option value="0">-- Select Priority --</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="Add New Task" />
+    </form>
+
+    <hr/>
+
+    <ul id="tasks"></ul>
+
+    <script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
+</body>
+</html>
