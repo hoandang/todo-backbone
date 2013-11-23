@@ -34,7 +34,7 @@ $app->get ('/tasks', function () use ($app) {
 
 $app->get ('/tasks/:id', function ($id) use ($app) {
     $task = R::findOne ('tasks', 'id=?', array ($id));
-    echo trim(json_encode(R::exportAll($task)), '[]');
+    echo $task;
 });
 
 $app->post ('/tasks', function () use ($app) {
